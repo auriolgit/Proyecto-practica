@@ -97,34 +97,5 @@ void avoidObstacle() {
     tiempoAnterior = millis();
   }
 
-  // No girar el servo (elimina esta parte)
-  // for (int angulo = 0; angulo <= 180; angulo += 45) {
-  //   miServo.write(angulo);
-  //   delay(500); // Ajusta según sea necesario
-  //   int distancia = medirDistancia();
 
-  //   // Ajusta el umbral para detectar obstáculos a una distancia prudente
-  //   int umbral = 20; // Ajusta según sea necesario
-
-  //   // Si no hay obstáculos en la dirección actual, girar hacia esa dirección
-  //   if (distancia > umbral) {
-  //     // Determinar si es más seguro girar a la izquierda o a la derecha
-  //     if (angulo < 90) {
-  //       // Es más seguro girar a la izquierda
-  //       turnLeft();
-  //     } else {
-  //       // Es más seguro girar a la derecha
-  //       turnRight();
-  //     }
-
-  //     // Detener el movimiento después de girar
-  //     delay(500); // Ajusta según sea necesario
-  //     moveStop();
-  //     break; // Salir del bucle de escaneo
-  //   }
-  // }
-
-  // Volver el servo a la posición frontal (elimina esta parte)
-  // miServo.write(90);
-  // delay(500); // Ajusta según sea necesario
 }
