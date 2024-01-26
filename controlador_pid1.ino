@@ -1,9 +1,9 @@
-const int trigPin = 2;    // Pin de trig del sensor de ultrasonido
-const int echoPin = 3;    // Pin de echo del sensor de ultrasonido
-const int motorPin1 = 9;  // Pin 1 del puente H para controlar el motor 1
-const int motorPin2 = 10; // Pin 2 del puente H para controlar el motor 1
-const int motorPin3 = 5;  // Pin 1 del puente H para controlar el motor 2
-const int motorPin4 = 6;  // Pin 2 del puente H para controlar el motor 2
+const int trigPin = 8;    // Pin de trig del sensor de ultrasonido
+const int echoPin = 9;    // Pin de echo del sensor de ultrasonido
+const int motorPin1 = 6;  // Pin 1 del puente H para controlar el motor 1
+const int motorPin2 = 7; // Pin 2 del puente H para controlar el motor 1
+const int motorPin3 = 4;  // Pin 1 del puente H para controlar el motor 2
+const int motorPin4 = 5;  // Pin 2 del puente H para controlar el motor 2
 
 // Constantes para el controlador PID
 float Kp = 2;  // Constante proporcional (ajústala según sea necesario)
