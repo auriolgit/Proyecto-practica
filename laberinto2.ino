@@ -1,12 +1,12 @@
-const int trigPin = 8;    // Pin de trig del sensor de ultrasonido
+  const int trigPin = 8;    // Pin de trig del sensor de ultrasonido
 const int echoPin = 9;    // Pin de echo del sensor de ultrasonido
 const int motorPin1 = 6;  // Pin 1 del puente H para controlar el motor 1 (IN1)
 const int motorPin2 = 7;  // Pin 2 del puente H para controlar el motor 1 (IN2)
 const int motorPin3 = 4;  // Pin 1 del puente H para controlar el motor 2 (IN3)
 const int motorPin4 = 5;  // Pin 2 del puente H para controlar el motor 2 (IN4)
 
-const int distanceThreshold = 10; // Umbral de distancia para detectar obstáculos
-const int clearThreshold = 15;    // Umbral de distancia para dejar de girar
+const int distanceThreshold = 20; // Umbral de distancia para detectar obstáculos
+const int clearThreshold = 25;    // Umbral de distancia para dejar de girar
 
 void setup() {
   Serial.begin(9600);
@@ -76,14 +76,14 @@ void girarEnPropioEje() {
   // Gira el carrito en su propio eje (solo rueda derecha hacia atrás)
   analogWrite(motorPin1, 0);    // Avanzar rueda izquierda
   analogWrite(motorPin2, 0);    // Detener rueda derecha
-  analogWrite(motorPin3, 255);    // Detener rueda izquierda
-  analogWrite(motorPin4, 0);  // Retroceder rueda derecha
+  analogWrite(motorPin3, 255);    // Retroceder rueda derecha
+  analogWrite(motorPin4, 0);  // Avanzar rueda derecha
 }
 
 void avanzarSimple() {
   // Activa los motores para avanzar
-  analogWrite(motorPin1, 0);  // Avanzar rueda izquierda
-  analogWrite(motorPin2, 255);    // Detener retroceso rueda izquierda
-  analogWrite(motorPin3, 0);  // Avanzar rueda derecha
-  analogWrite(motorPin4, 255);    // Detener retroceso rueda derecha
+  analogWrite(motorPin1, 0);  // Detener rueda izquierda
+  analogWrite(motorPin2, 150);    // Avanzar rueda izquierda
+  analogWrite(motorPin3, 0);  // Detener rueda derecha
+  analogWrite(motorPin4, 255);    // Avanza rueda derecha
 }
